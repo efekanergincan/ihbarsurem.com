@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>İhbar Süresi Hesaplama Sonuçları</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>İhbar Süresi Hesaplama Sonuçları</h1>
+    <form>
+        <div class="form-group">
+            <label for="startDate">İşe Başlangıç Tarihi:</label>
+            <input type="text" class="form-control" id="startDate" name="startDate" th:value="${startDate}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="endDate">İstifa Dilekçesinin Verildiği Tarih:</label>
+            <input type="text" class="form-control" id="endDate" name="endDate" th:value="${endDate}" readonly>
+        </div>
+        <div class="form-group">
+            <label>İş Arama İzni Kullanmak İstiyor Musunuz?</label>
+            <input type="text" class="form-control" id="jobSearchPermission" name="jobSearchPermission" th:value="${jobSearchPermission}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="daysBetween">Çalışma Süresi (Gün):</label>
+            <input type="text" class="form-control" id="daysBetween" name="daysBetween" th:value="${daysBetween}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="reducedNoticePeriod">İhbar Süresi (Gün):</label>
+            <input type="text" class="form-control" id="reducedNoticePeriod" name="reducedNoticePeriod" th:value="${reducedNoticePeriod}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="newEndDate">İşten Çıkış Tarihi:</label>
+            <input type="text" class="form-control" id="newEndDate" name="newEndDate" th:value="${newEndDate}" readonly>
+        </div>
+    </form>
+</div>
+</body>
+</html>
