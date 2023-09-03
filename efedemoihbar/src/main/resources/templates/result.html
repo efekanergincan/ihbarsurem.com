@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>İhbar Süresi Hesaplama Sonuçları</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>İhbar Süresi Hesaplama Sonuçları</h1>
+    <form>
+        <div class="form-group">
+            <label for="startDate">İşe Başlangıç Tarihi:</label>
+            <input type="text" class="form-control" id="startDate" name="startDate" th:value="${startDate}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="endDate">İstifa Dilekçesinin Verildiği Tarih:</label>
+            <input type="text" class="form-control" id="endDate" name="endDate" th:value="${endDate}" readonly>
+        </div>
+        <div class="form-group">
+            <label>İş Arama İzni Kullanmak İstiyor Musunuz?</label>
+            <input type="text" class="form-control" id="jobSearchPermission" name="jobSearchPermission" th:value="${jobSearchPermission}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="daysBetween">Çalışma Süresi (Gün):</label>
+            <input type="text" class="form-control" id="daysBetween" name="daysBetween" th:value="${daysBetween}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="reducedNoticePeriod">İhbar Süresi (Gün):</label>
+            <input type="text" class="form-control" id="reducedNoticePeriod" name="reducedNoticePeriod" th:value="${reducedNoticePeriod}" readonly>
+        </div>
+        <div class="form-group">
+            <label for="newEndDate">İşten Çıkış Tarihi:</label>
+            <input type="text" class="form-control" id="newEndDate" name="newEndDate" th:value="${newEndDate}" readonly>
+        </div>
+    </form>
+    <div style="margin-top: 20px;">
+        <p style="font-weight: bold;">Açıklama:</p>
+        <p>İhbar süresi, çalışanın o iş yerinde çalıştığı süreye bağlı olarak değişir. Ne kadar uzun süre çalışan bir iş yerinde çalıştıysa ihbar süresi o kadar uzun olur.</p>
+        <p> Buna göre iş yerinde 6 aydan az çalışıldı ise 2 hafta, 6 ay - 1.5 yıl arası çalışıldı ise 4 hafta, 1.5 yıl- 3 yıl arası çalışıldı ise 6 hafta, 3 yıl ve üzeri çalışıldı ise 8 hafta ihbar süresi bulunmaktadır.
+        <p> Bu süre zarfında çalışanın iş arama izni hakkı bulunmaktadır. 2 hafta ihbar süresi bulunan çalışanın 28 saat, 4 hafta ihbar süresi bulunan çalışanın 56 saat, 6 hafta ihbar süresi bulunan çalışanın 84 saat, 8 hafta ihbar süresi bulunan çalışanın ise 112 saat iş arama izni bulunmaktadır. Bu izinler toplu halde kullanılabilir</p>
+        <p> Bu program, bulunduğunuz şirkette çalıştığınız güne göre ihbar sürenizi hesaplar. Arama izninizi toplu kullanmak istediğiniz durumda hakettiğiniz süre zarfını ihbar sürenizden düşer. Bu izni toplu kullanmadığınızda günlük en az 2 saat iş arama hakkınız bulunmaktadır.</p>
+    </div>
+</div>
+</body>
+</html>
